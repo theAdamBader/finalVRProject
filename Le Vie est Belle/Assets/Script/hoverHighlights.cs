@@ -1,7 +1,7 @@
 ﻿/*
 	REFERENCE:
-	Change Color on mouse over (Katus Production): https://youtu.be/VHeem-mywDk
-	Audio Source (Unity Docs): https://docs.unity3d.com/ScriptReference/AudioSource.PlayOneShot.html
+	Change Color on mouse over by Katus Production: https://youtu.be/VHeem-mywDk
+	Audio Source on Unity Docs: https://docs.unity3d.com/ScriptReference/AudioSource.PlayOneShot.html
 */
 
 using System.Collections;
