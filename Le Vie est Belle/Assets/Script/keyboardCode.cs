@@ -28,6 +28,7 @@ public class keyboardCode : MonoBehaviour {
 			if (playerInput == correctInput)
 			{
 				Debug.Log ("Unlocked");
+				Destroy(GameObject.FindWithTag("Door"));
 			}
 
 			else {

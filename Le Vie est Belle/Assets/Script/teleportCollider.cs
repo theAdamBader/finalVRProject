@@ -12,7 +12,7 @@ public class teleportCollider : MonoBehaviour {
 	// Creating a variable for a player and a receiver for when the player teleports to the other world
 
 	public Transform player;
-	public Transform reciever;
+	public Transform recieve;
 
 	private bool playerIsOverlapping = false;
 
@@ -20,36 +20,36 @@ public class teleportCollider : MonoBehaviour {
 	void Update () {
 		if (playerIsOverlapping)
 		{
-			Vector3 portalToPlayer = player.position - transform.position;
-			float dotProduct = Vector3.Dot(transform.up, portalToPlayer);
+			Vector3 portalToThePlayer = player.position - transform.position;
+			float dotProduct = Vector3.Dot(transform.up, portalToThePlayer);
 
 			// If this is true: The player has moved across the portal
 			if (dotProduct < 0f)
 			{
 				// Teleport him!
-				float rotationDiff = -Quaternion.Angle(transform.rotation, reciever.rotation);
-				rotationDiff += 180;
-				player.Rotate(Vector3.up, rotationDiff);
+				float rotationDifference = -Quaternion.Angle(transform.rotation, recieve.rotation);
+				rotationDifference += 180;
+				player.Rotate(Vector3.up, rotationDifference);
 
-				Vector3 positionOffset = Quaternion.Euler(0f, rotationDiff, 0f) * portalToPlayer;
-				player.position = reciever.position + positionOffset;
+				Vector3 offsetPosition = Quaternion.Euler(0f, rotationDifference, 0f) * portalToThePlayer;
+				player.position = recieve.position + offsetPosition;
 
 				playerIsOverlapping = false;
 			}
 		}
 	}
 
-	void OnTriggerEnter (Collider other)
+	void OnTriggerEnter (Collider TeleportToPlayer)
 	{
-		if (other.tag == "Player")
+		if (TeleportToPlayer.tag == "Player")
 		{
 			playerIsOverlapping = true;
 		}
 	}
 
-	void OnTriggerExit (Collider other)
+	void OnTriggerExit (Collider TeleportToPlayer)
 	{
-		if (other.tag == "Player")
+		if (TeleportToPlayer.tag == "Player")
 		{
 			playerIsOverlapping = false;
 		}
