@@ -1047,7 +1047,7 @@ GameObject:
   m_Component:
   - component: {fileID: 461991676}
   m_Layer: 0
-  m_Name: Level One (Objects)
+  m_Name: Level One
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1939,7 +1939,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 854159104}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 7.94, y: 20.612, z: 63}
+  m_LocalPosition: {x: 417.98, y: 89.756, z: 60.9}
   m_LocalScale: {x: 0.5555556, y: 0.25, z: 10}
   m_Children: []
   m_Father: {fileID: 691903918}
@@ -2410,7 +2410,7 @@ GameObject:
   - component: {fileID: 969208999}
   - component: {fileID: 969208998}
   m_Layer: 0
-  m_Name: Front Wall (1)
+  m_Name: Ceiling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4218,7 +4218,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1467386664}
   m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 1.071, y: -0.02, z: -0.521}
+  m_LocalPosition: {x: 1.01, y: -0.02, z: -0.52}
   m_LocalScale: {x: 0.10000006, y: 0.6663528, z: 0.22234842}
   m_Children: []
   m_Father: {fileID: 907537417}
@@ -4278,7 +4278,7 @@ GameObject:
   - component: {fileID: 1500759403}
   - component: {fileID: 1500759402}
   m_Layer: 0
-  m_Name: Main World Cam
+  m_Name: Main World 1 Cam
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4292,7 +4292,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1500759400}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -61.67, y: -0.01191777, z: -91.9}
+  m_LocalPosition: {x: -61.6, y: -0.01191777, z: -91.9}
   m_LocalScale: {x: 0.5555556, y: 0.25, z: 10}
   m_Children: []
   m_Father: {fileID: 691903918}
@@ -4363,7 +4363,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 8400000, guid: 21e99fa1c0af69947862aadbe8a2ca82, type: 2}
+  m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -4638,7 +4638,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1603437604}
   m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: -0.5}
-  m_LocalPosition: {x: 1.0100006, y: 0.009000143, z: -0.21000051}
+  m_LocalPosition: {x: 1.01, y: 0.009000143, z: -0.07}
   m_LocalScale: {x: 0.16666697, y: 0.66666764, z: 0.5555574}
   m_Children: []
   m_Father: {fileID: 1796137422}
@@ -5116,8 +5116,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14fefdd04d93795439bfbec65f5af62d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  world_1Cam: {fileID: 854159107}
-  world_1CamMat: {fileID: 2100000, guid: 9d985ecc004a5fe47ad37bea3bfa90f7, type: 2}
+  mainWorldCamReturn1: {fileID: 1500759406}
+  mainWorldCamReturn1Mat: {fileID: 2100000, guid: a3e1f4c9f324d0f4da44585d715a070b,
+    type: 2}
+  world1Cam: {fileID: 854159107}
+  world1CamMat: {fileID: 2100000, guid: 9d985ecc004a5fe47ad37bea3bfa90f7, type: 2}
 --- !u!1 &1884684641
 GameObject:
   m_ObjectHideFlags: 0
