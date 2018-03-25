@@ -2029,7 +2029,6 @@ Transform:
   - {fileID: 112454156}
   - {fileID: 1772844316}
   - {fileID: 1796137422}
-  - {fileID: 1464362408}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3510,7 +3509,7 @@ Transform:
   m_LocalScale: {x: 0.65, y: 0.2, z: 0.3}
   m_Children: []
   m_Father: {fileID: 1901074475}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &960985338
 MeshRenderer:
@@ -5574,7 +5573,7 @@ GameObject:
   - component: {fileID: 1464362409}
   - component: {fileID: 1464362410}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Door
   m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5586,11 +5585,11 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1464362407}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 42.909, y: -59.5, z: 133.805}
-  m_LocalScale: {x: 4.908467, y: 2.6474812, z: 0.13897799}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: 0.4062317, y: 0.56907654, z: 1.3657471}
+  m_LocalScale: {x: 1.9633868, y: 1.0589925, z: 0.055591196}
   m_Children: []
-  m_Father: {fileID: 660318354}
+  m_Father: {fileID: 1901074475}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1464362409
@@ -7539,6 +7538,7 @@ Transform:
   - {fileID: 232426413}
   - {fileID: 1212522125}
   - {fileID: 832656593}
+  - {fileID: 1464362408}
   - {fileID: 2040866271}
   - {fileID: 960985337}
   m_Father: {fileID: 660318354}
@@ -7873,7 +7873,7 @@ Transform:
   m_LocalScale: {x: 548.7817, y: 439.29544, z: 69.7542}
   m_Children: []
   m_Father: {fileID: 1901074475}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2040866272
 MeshRenderer:
