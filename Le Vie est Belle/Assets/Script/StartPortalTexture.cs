@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StartPortalTexture : MonoBehaviour {
+public class startPortalTexture : MonoBehaviour {
 
 	public Camera mainWorldCamReturn1;
 	public Material mainWorldCamReturn1Mat;

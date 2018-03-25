@@ -29,6 +29,7 @@ public class keyboardCode : MonoBehaviour {
 			{
 				Debug.Log ("Unlocked");
 				Destroy(GameObject.FindWithTag("Door"));
+			
 			}
 
 			else {
