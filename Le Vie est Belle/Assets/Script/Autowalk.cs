@@ -1,12 +1,17 @@
-﻿using System.Collections;
+﻿/*
+	REFERENCE:
+	Autowalk: https://youtu.be/JmgOeQ3Gric
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Autowalk : MonoBehaviour {
 	public float speed = 2.0f;
-	protected bool moveForward;
+	public bool moveForward;
 	private Transform centerCam;
-
+	private Transform centerCon;
 	private CharacterController controller;
 
 
@@ -15,7 +20,8 @@ public class Autowalk : MonoBehaviour {
 	void Start () {
 		controller = GetComponent<CharacterController> ();
 
-		centerCam = Camera.main.transform;
+		//centerCam = Camera.main.transform;
+		centerCon = GameObject.FindWithTag("Right Hand").transform;
 	}
 
 	// Update is called once per frame
@@ -29,9 +35,8 @@ public class Autowalk : MonoBehaviour {
 
 		if (moveForward){
 
-			Vector3 forward = centerCam.TransformDirection (Vector3.forward);
+			Vector3 forward = centerCon.TransformDirection (Vector3.forward);
 			controller.SimpleMove (forward * speed);
-
 		}
 	}
 
