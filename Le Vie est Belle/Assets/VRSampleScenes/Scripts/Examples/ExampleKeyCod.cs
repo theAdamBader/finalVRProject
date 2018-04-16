@@ -17,11 +17,6 @@ public class ExampleKeyCod : MonoBehaviour {
 
 	public static int totalDigits = 0;
 
-	// Use this for initialization
-	void Start () {
-
-	}
-
 	// Update is called once per frame
 	void Update () {
 		Debug.Log (playerInput);
@@ -57,8 +52,7 @@ public class ExampleKeyCod : MonoBehaviour {
 		m_InteractiveItem.OnClick -= HandleClick;
 
 	}
-
-
+		
 
 	void HandleClick(){
 		playerInput += gameObject.name;

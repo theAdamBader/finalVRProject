@@ -53,7 +53,7 @@ namespace VRStandardAssets.Utils
             // Set the default swipe to be none.
             SwipeDirection swipe = SwipeDirection.NONE;
 
-            if (Input.GetButtonDown("Fire1"))
+			if (Input.GetButtonDown("Fire1"))
             {
                 // When Fire1 is pressed record the position of the mouse.
                 m_MouseDownPosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
@@ -82,7 +82,7 @@ namespace VRStandardAssets.Utils
                 OnSwipe(swipe);
 
             // This if statement is to trigger events based on the information gathered before.
-            if(Input.GetButtonUp ("Fire1"))
+			if(Input.GetButtonUp ("Fire1")  || OVRInput.Get (OVRInput.Button.PrimaryTouchpad))
             {
                 // If anything has subscribed to OnUp call it.
                 if (OnUp != null)
@@ -109,7 +109,7 @@ namespace VRStandardAssets.Utils
             }
 
             // If the Cancel button is pressed and there are subscribers to OnCancel call it.
-            if (Input.GetButtonDown("Cancel"))
+			if (Input.GetButtonDown("Cancel") || OVRInput.GetDown (OVRInput.RawButton.Back, OVRInput.Controller.LTrackedRemote) || OVRInput.GetDown (OVRInput.RawButton.Back, OVRInput.Controller.RTrackedRemote))
             {
                 if (OnCancel != null)
                     OnCancel();

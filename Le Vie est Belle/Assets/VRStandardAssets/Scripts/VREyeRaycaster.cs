@@ -25,6 +25,11 @@ namespace VRStandardAssets.Utils
         private VRInteractiveItem m_CurrentInteractible;                //The current interactive item
         private VRInteractiveItem m_LastInteractible;                   //The last interactive item
 
+		//Modified Script
+		[SerializeField] private LineRenderer m_LineRenderer = null; // For supporting Laser Pointer
+		public bool ShowLineRenderer = true;                         // Laser pointer visibility
+		[SerializeField] private Transform m_TrackingSpace = null;   // Tracking space (for line renderer)
+
 
         // Utility for other classes to get the current interactive item
         public VRInteractiveItem CurrentInteractible
@@ -68,6 +73,28 @@ namespace VRStandardAssets.Utils
             // Create a ray that points forwards from the camera.
             Ray ray = new Ray(m_Camera.position, m_Camera.forward);
             RaycastHit hit;
+
+			//Modified Scripts (Inserting laser for the controller)
+			Vector3 worldStartPoint = Vector3.zero;
+			Vector3 worldEndPoint = Vector3.zero;
+			if (m_LineRenderer !=null) {
+				m_LineRenderer.enabled = ControllerIsConnected && ShowLineRenderer;
+			}
+
+			if (ControllerIsConnected && m_TrackingSpace != null) {
+				Matrix4x4 localToWorld = m_TrackingSpace.localToWorldMatrix;
+				Quaternion orientation = OVRInput.GetLocalControllerRotation (Controller);
+
+				Vector3 localStartPoint = OVRInput.GetLocalControllerPosition (Controller);
+				Vector3 localEndPoint = localStartPoint + ((orientation * Vector3.forward) * 500.0f);
+
+				worldStartPoint = localToWorld.MultiplyPoint(localStartPoint);
+				worldEndPoint = localToWorld.MultiplyPoint(localEndPoint);
+
+				// Create new ray
+				ray = new Ray(worldStartPoint, worldEndPoint - worldStartPoint);
+			}
+				
             
             // Do the raycast forweards to see if we hit an interactive item
             if (Physics.Raycast(ray, out hit, m_RayLength, ~m_ExclusionLayers))
@@ -91,6 +118,10 @@ namespace VRStandardAssets.Utils
 
                 if (OnRaycasthit != null)
                     OnRaycasthit(hit);
+
+				if (interactible) {
+					worldEndPoint = hit.point;
+				}
             }
             else
             {
@@ -100,7 +131,7 @@ namespace VRStandardAssets.Utils
 
                 // Position the reticle at default distance.
                 if (m_Reticle)
-                    m_Reticle.SetPosition();
+					m_Reticle.SetPosition(ray.origin, ray.direction);
             }
         }
 
@@ -142,5 +173,23 @@ namespace VRStandardAssets.Utils
                 m_CurrentInteractible.DoubleClick();
 
         }
+
+		public bool ControllerIsConnected {
+			get {
+				OVRInput.Controller controller =OVRInput.GetConnectedControllers () & (OVRInput.Controller.LTrackedRemote | OVRInput.Controller.RTrackedRemote);
+				return controller == OVRInput.Controller.LTrackedRemote || controller == OVRInput.Controller.RTrackedRemote;
+			}
+		}
+		public OVRInput.Controller Controller {
+			get {
+				OVRInput.Controller controller = OVRInput.GetConnectedControllers ();
+				if ((controller & OVRInput.Controller.LTrackedRemote) == OVRInput.Controller.LTrackedRemote) {
+					return OVRInput.Controller.LTrackedRemote;
+				} else if ((controller & OVRInput.Controller.RTrackedRemote) == OVRInput.Controller.RTrackedRemote) {
+					return OVRInput.Controller.RTrackedRemote;
+				}
+				return OVRInput.GetActiveController ();
+			}
+		}
     }
 }

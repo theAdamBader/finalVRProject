@@ -1,3 +1,8 @@
+/*
+	REFERENCE
+	-VR Sample (Example Interaction.cs): https://assetstore.unity.com/packages/essentials/tutorial-projects/vr-samples-51519
+*/
+
 using UnityEngine;
 using VRStandardAssets.Utils;
 
@@ -8,16 +13,12 @@ namespace VRStandardAssets.Examples
     public class ExampleInteractiveItem : MonoBehaviour
     {
         [SerializeField] private Material m_NormalMaterial;                
-        [SerializeField] private Material m_OverMaterial;                  
-        //[SerializeField] private Material m_ClickedMaterial;               
-        [SerializeField] private Material m_DoubleClickedMaterial;         
+        [SerializeField] private Material m_OverMaterial;                                         
         [SerializeField] private VRInteractiveItem m_InteractiveItem;
         [SerializeField] private Renderer m_Renderer;
 		public AudioClip audioFile;
 		[SerializeField] private AudioSource m_Audio;
 		public Collider box;
-
-
 
 
         private void Awake ()
@@ -31,7 +32,7 @@ namespace VRStandardAssets.Examples
             m_InteractiveItem.OnOver += HandleOver;
             m_InteractiveItem.OnOut += HandleOut;
             m_InteractiveItem.OnClick += HandleClick;
-            m_InteractiveItem.OnDoubleClick += HandleDoubleClick;
+       
         }
 
 
@@ -40,7 +41,6 @@ namespace VRStandardAssets.Examples
             m_InteractiveItem.OnOver -= HandleOver;
             m_InteractiveItem.OnOut -= HandleOut;
             m_InteractiveItem.OnClick -= HandleClick;
-            m_InteractiveItem.OnDoubleClick -= HandleDoubleClick;
         }
 
 
@@ -69,19 +69,13 @@ namespace VRStandardAssets.Examples
         //Handle the Click event
         private void HandleClick()
         {
-            Debug.Log("Show click state");
+
 			// Mouse pressed then the audio would play
 			m_Audio = GetComponent<AudioSource> ();
 			m_Audio.PlayOneShot (audioFile, 0.5f);
+
         }
 
-
-        //Handle the DoubleClick event
-        private void HandleDoubleClick()
-        {
-            Debug.Log("Show double click");
-            m_Renderer.material = m_DoubleClickedMaterial;
-        }
     }
 
 }
