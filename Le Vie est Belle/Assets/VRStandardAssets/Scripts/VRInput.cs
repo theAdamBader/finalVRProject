@@ -82,6 +82,7 @@ namespace VRStandardAssets.Utils
                 OnSwipe(swipe);
 
             // This if statement is to trigger events based on the information gathered before.
+			// Modified script (add a function where player can press the pad or controller touchpad)
 			if(Input.GetButtonUp ("Fire1")  || OVRInput.Get (OVRInput.Button.PrimaryTouchpad))
             {
                 // If anything has subscribed to OnUp call it.
