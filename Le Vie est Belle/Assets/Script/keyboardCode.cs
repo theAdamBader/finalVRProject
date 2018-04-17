@@ -9,7 +9,7 @@ using UnityEngine;
 
 public class keyboardCode : MonoBehaviour {
 
-	public static string correctInput = "CCGGAAGFFEEDDC";
+	public static string correctInput = "CCCC";
 	public static string playerInput = "";
 
 	public static int totalDigits = 0;
@@ -23,7 +23,7 @@ public class keyboardCode : MonoBehaviour {
 	void Update () {
 		Debug.Log (playerInput);
 		//Debug.Log ("Unlocked");
-		if (totalDigits == 14){
+		if (totalDigits == 4){
 			
 			if (playerInput == correctInput)
 			{
@@ -31,17 +31,24 @@ public class keyboardCode : MonoBehaviour {
 				Destroy(GameObject.FindWithTag("Door"));
 			
 			}
-
 			else {
 				playerInput = "";
 				totalDigits = 0;
 				Debug.Log ("Try Again");
 			}
 		}
+
+
+
 	}
 
 	void OnMouseDown(){
 		playerInput += gameObject.name;
 		totalDigits ++;
+		if (gameObject.tag == "Clearing") {
+			playerInput = "";
+			totalDigits = 0;
+			Debug.Log ("Clear");
+		}
 	}
 }

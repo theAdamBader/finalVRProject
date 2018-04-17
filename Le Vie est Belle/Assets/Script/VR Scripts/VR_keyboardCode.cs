@@ -57,5 +57,10 @@ public class VR_keyboardCode : MonoBehaviour {
 	void HandleClick(){
 		playerInput += gameObject.name;
 		totalDigits ++;
+
+		if (gameObject.tag == "Clearing") {
+			playerInput = "";
+			totalDigits = 0;
+		}
 	}
 }
