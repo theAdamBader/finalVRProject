@@ -93,6 +93,8 @@ namespace VRStandardAssets.Utils
 
 				// Create new ray
 				ray = new Ray(worldStartPoint, worldEndPoint - worldStartPoint);
+
+
 			}
 				
             
@@ -122,6 +124,8 @@ namespace VRStandardAssets.Utils
 				if (interactible) {
 					worldEndPoint = hit.point;
 				}
+
+				m_CurrentInteractible = interactible;
             }
             else
             {
@@ -133,6 +137,11 @@ namespace VRStandardAssets.Utils
                 if (m_Reticle)
 					m_Reticle.SetPosition(ray.origin, ray.direction);
             }
+
+			if (ControllerIsConnected && m_LineRenderer != null) {
+				m_LineRenderer.SetPosition (0, worldStartPoint);
+				m_LineRenderer.SetPosition (1, worldEndPoint);
+			}
         }
 
 

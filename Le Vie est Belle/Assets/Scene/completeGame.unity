@@ -1420,7 +1420,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: b182d1bfbde1c4d44901f93ced1e8baf, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: b182d1bfbde1c4d44901f93ced1e8baf, type: 3}
       propertyPath: m_LocalScale.x
@@ -4073,7 +4073,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4937240236956242, guid: 44f2fa1562d21db43a680be25bc3c72f, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4937240236956242, guid: 44f2fa1562d21db43a680be25bc3c72f, type: 2}
       propertyPath: m_LocalScale.x
@@ -8054,7 +8054,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4937240236956242, guid: 44f2fa1562d21db43a680be25bc3c72f, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4937240236956242, guid: 44f2fa1562d21db43a680be25bc3c72f, type: 2}
       propertyPath: m_LocalScale.x
@@ -8864,7 +8864,6 @@ GameObject:
   - component: {fileID: 915619858}
   - component: {fileID: 915619857}
   - component: {fileID: 915619856}
-  - component: {fileID: 915619859}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -8917,35 +8916,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &915619859
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 915619855}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f1a9a1d119a5944aacfb87d1ec283a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rayTransform: {fileID: 0}
-  joyPadClickButton: 1
-  gazeClickKey: 32
-  performSphereCastForGazepointer: 0
-  matchNormalOnPhysicsColliders: 0
-  useRightStickScroll: 1
-  rightStickDeadZone: 0.15
-  useSwipeScroll: 1
-  swipeDragThreshold: 2
-  swipeDragScale: 1
-  InvertSwipeXAxis: 0
-  angleDragThreshold: 1
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_AllowActivationOnMobileDevice: 1
 --- !u!1 &917878562
 GameObject:
   m_ObjectHideFlags: 0
@@ -15405,6 +15375,16 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114630962172039408, guid: 9cffae3770b7da246a4b394efbde7f7c,
+        type: 2}
+      propertyPath: m_RayLength
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114630962172039408, guid: 9cffae3770b7da246a4b394efbde7f7c,
+        type: 2}
+      propertyPath: m_DebugRayLength
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9cffae3770b7da246a4b394efbde7f7c, type: 2}
   m_IsPrefabParent: 0
@@ -19065,7 +19045,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: b182d1bfbde1c4d44901f93ced1e8baf, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: b182d1bfbde1c4d44901f93ced1e8baf, type: 3}
       propertyPath: m_LocalScale.x
