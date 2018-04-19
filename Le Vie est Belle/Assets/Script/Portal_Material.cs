@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class startPortalTexture : MonoBehaviour {
+public class Portal_Material : MonoBehaviour {
 
 	public Camera mainWorldCamReturn1;
 	public Material mainWorldCamReturn1Mat;
@@ -29,5 +29,4 @@ public class startPortalTexture : MonoBehaviour {
 		world1Cam.targetTexture = new RenderTexture (Screen.width, Screen.height, 24);
 		world1CamMat.mainTexture = world1Cam.targetTexture;
 	}
-
 }
