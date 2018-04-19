@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/VRSampleScenes/Scenes/Examples/InteractiveItem.unity
     guid: bd5d32b24f055cf4886a262429d496bf
   - enabled: 1
+    path: Assets/Scene/mainMenu.unity
+    guid: 5ee9e4d74f848f843a677c75f55cb887
+  - enabled: 1
     path: Assets/Scene/completeGame.unity
     guid: c6fec86a6aadaeb48b7f847280e1b782
   - enabled: 1

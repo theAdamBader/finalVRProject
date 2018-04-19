@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using VRStandardAssets.Utils;
 
 
-public class Credits : MonoBehaviour
+public class Start_Game : MonoBehaviour
 {
 
 	[SerializeField] private VRCameraFade m_CameraFade;                 // This fades the scene out when a new scene is about to be loaded
@@ -23,13 +23,13 @@ public class Credits : MonoBehaviour
 
 		m_InteractiveItem.OnClick += HandleClick;
 	}
-		
+
 
 	//Handle the Click event
 	private void HandleClick()
 	{
 		// Load the level
-		SceneManager.LoadScene(2);
+		SceneManager.LoadScene(1);
 
 	}
 }
