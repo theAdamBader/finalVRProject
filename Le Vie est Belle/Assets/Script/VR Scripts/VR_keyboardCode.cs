@@ -11,11 +11,18 @@ using VRStandardAssets.Utils;
 public class VR_keyboardCode : MonoBehaviour {
 
 	[SerializeField] private VRInteractiveItem m_InteractiveItem;
+	public AudioClip audioFile;
+	AudioSource m_Audio;
 
 	public static string correctInput = "CCGGAAGFFEEDDC";
 	public static string playerInput = "";
 
 	public static int totalDigits = 0;
+
+	void Start(){
+
+		m_Audio = GetComponent<AudioSource> ();
+	}
 
 	// Update is called once per frame
 	void Update () {
@@ -61,6 +68,10 @@ public class VR_keyboardCode : MonoBehaviour {
 		if (gameObject.tag == "Clearing") {
 			playerInput = "";
 			totalDigits = 0;
+		}
+
+		if (playerInput == correctInput) {
+			m_Audio.PlayOneShot (audioFile, 0.5f);
 		}
 	}
 }
