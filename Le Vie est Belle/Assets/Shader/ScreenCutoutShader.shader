@@ -1,3 +1,4 @@
+// Reference: Teleport by Brackeys: https://youtu.be/cuQao3hEKfs
 // Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
 
 Shader "Unlit/ScreenCutoutShader"

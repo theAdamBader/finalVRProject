@@ -18120,6 +18120,16 @@ Prefab:
       propertyPath: m_DebugRayLength
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114598362800441940, guid: 9cffae3770b7da246a4b394efbde7f7c,
+        type: 2}
+      propertyPath: m_DefaultDistance
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 120843159386767100, guid: 9cffae3770b7da246a4b394efbde7f7c,
+        type: 2}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: e6992809f1d15c54ab6644b4cf34fd7b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9cffae3770b7da246a4b394efbde7f7c, type: 2}
   m_IsPrefabParent: 0

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using VRStandardAssets.Utils;
 
-
+// This script handles the action for the player to start the game
 public class Start_Game : MonoBehaviour
 {
 
@@ -20,16 +20,12 @@ public class Start_Game : MonoBehaviour
 
 	private void OnDisable ()
 	{
-
 		m_InteractiveItem.OnClick += HandleClick;
 	}
-
-
-	//Handle the Click event
+		
 	private void HandleClick()
 	{
-		// Load the level
+		// Loads the main level
 		SceneManager.LoadScene(1);
-
 	}
 }

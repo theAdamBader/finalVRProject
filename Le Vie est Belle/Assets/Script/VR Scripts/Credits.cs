@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using VRStandardAssets.Utils;
 
-
+// This script handles the end scene, credits
 public class Credits : MonoBehaviour
 {
 
@@ -20,7 +20,6 @@ public class Credits : MonoBehaviour
 
 	private void OnDisable ()
 	{
-
 		m_InteractiveItem.OnClick += HandleClick;
 	}
 		
@@ -28,8 +27,7 @@ public class Credits : MonoBehaviour
 	//Handle the Click event
 	private void HandleClick()
 	{
-		// Load the level
+		// Load the credits level
 		SceneManager.LoadScene(2);
-
 	}
 }

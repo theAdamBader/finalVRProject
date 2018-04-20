@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// This script handles the camera between the player and portal so it allows the player to see the other world
 public class cameraPortal : MonoBehaviour {
 
 	public Transform playerCam;
@@ -10,6 +11,7 @@ public class cameraPortal : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		
 		Vector3 playerOffsetFromPortal = playerCam.position - portalEnd.position;
 		transform.position = portalStart.position + playerOffsetFromPortal;
 
