@@ -1272,6 +1272,10 @@ Prefab:
       propertyPath: m_Name
       value: Lamp Shade
       objectReference: {fileID: 0}
+    - target: {fileID: 2300004, guid: de90a054a83966e45b0a48d8f4006b2f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e6992809f1d15c54ab6644b4cf34fd7b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: de90a054a83966e45b0a48d8f4006b2f, type: 3}
   m_IsPrefabParent: 0
