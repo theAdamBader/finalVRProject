@@ -664,7 +664,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: EXIT
+  m_Text: SORTIE
 --- !u!222 &879180800
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1764,7 +1764,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: THANK YOU FOR PLAYING
+  m_Text: 'THANK YOU FOR PLAYING
+
+    LA VIE EST BELLE DEMO'
 --- !u!222 &1674392302
 CanvasRenderer:
   m_ObjectHideFlags: 0

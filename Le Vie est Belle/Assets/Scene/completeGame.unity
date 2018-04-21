@@ -18872,7 +18872,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2e48cfeac5b67f4c814dea9becf2777, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
 --- !u!1 &1435621798
 GameObject:
   m_ObjectHideFlags: 0
@@ -24927,7 +24926,7 @@ Prefab:
     - target: {fileID: 114630962172039408, guid: 9cffae3770b7da246a4b394efbde7f7c,
         type: 2}
       propertyPath: m_RayLength
-      value: 50
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 114630962172039408, guid: 9cffae3770b7da246a4b394efbde7f7c,
         type: 2}
@@ -24937,7 +24936,7 @@ Prefab:
     - target: {fileID: 114598362800441940, guid: 9cffae3770b7da246a4b394efbde7f7c,
         type: 2}
       propertyPath: m_DefaultDistance
-      value: 50
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 120843159386767100, guid: 9cffae3770b7da246a4b394efbde7f7c,
         type: 2}
@@ -24948,6 +24947,16 @@ Prefab:
         type: 2}
       propertyPath: m_Parameters.colorGradient.key1.a
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 120843159386767100, guid: 9cffae3770b7da246a4b394efbde7f7c,
+        type: 2}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
+      value: 0.024391174
+      objectReference: {fileID: 0}
+    - target: {fileID: 120843159386767100, guid: 9cffae3770b7da246a4b394efbde7f7c,
+        type: 2}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].time
+      value: 0.5088959
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9cffae3770b7da246a4b394efbde7f7c, type: 2}
