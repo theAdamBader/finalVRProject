@@ -17,7 +17,7 @@ public class VR_keyboardInteraction : MonoBehaviour
 	public AudioClip audioFile;
 	[SerializeField] private AudioSource m_Audio;
 	public Collider box;
-
+	//[SerializeField] private ParticleSystem m_Particle;
 
 	private void Awake ()
 	{
@@ -74,5 +74,9 @@ public class VR_keyboardInteraction : MonoBehaviour
 		// When clicking on the objects, the audio would play
 		m_Audio = GetComponent<AudioSource> ();
 		m_Audio.PlayOneShot (audioFile, 0.5f);
+
+		//m_Particle.emissionRate = 10.0f;
 	}
+
+
 }
