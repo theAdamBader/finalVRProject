@@ -3047,7 +3047,6 @@ GameObject:
   - component: {fileID: 139002726}
   - component: {fileID: 139002725}
   - component: {fileID: 139002723}
-  - component: {fileID: 139002722}
   - component: {fileID: 139002724}
   - component: {fileID: 139002721}
   - component: {fileID: 139002729}
@@ -3085,18 +3084,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_InteractiveItem: {fileID: 139002729}
   audioFile: {fileID: 0}
---- !u!114 &139002722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114129369369810064, guid: 8cb9bfb33e7076a4fa86e7404f108dc6,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 139002719}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48bf5c8fc4c5fa24192ecdde0cb20ed4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &139002723
 AudioSource:
   m_ObjectHideFlags: 0
@@ -21389,7 +21376,6 @@ GameObject:
   - component: {fileID: 809871318}
   - component: {fileID: 809871317}
   - component: {fileID: 809871315}
-  - component: {fileID: 809871314}
   - component: {fileID: 809871316}
   - component: {fileID: 809871313}
   - component: {fileID: 809871321}
@@ -21427,18 +21413,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_InteractiveItem: {fileID: 809871321}
   audioFile: {fileID: 0}
---- !u!114 &809871314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114296435650506550, guid: 8cb9bfb33e7076a4fa86e7404f108dc6,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 809871311}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48bf5c8fc4c5fa24192ecdde0cb20ed4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &809871315
 AudioSource:
   m_ObjectHideFlags: 0
@@ -31411,7 +31385,6 @@ GameObject:
   - component: {fileID: 1093023514}
   - component: {fileID: 1093023511}
   - component: {fileID: 1093023513}
-  - component: {fileID: 1093023510}
   - component: {fileID: 1093023512}
   - component: {fileID: 1093023509}
   - component: {fileID: 1093023517}
@@ -31449,18 +31422,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_InteractiveItem: {fileID: 1093023517}
   audioFile: {fileID: 0}
---- !u!114 &1093023510
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114752804511792036, guid: 8cb9bfb33e7076a4fa86e7404f108dc6,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1093023507}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48bf5c8fc4c5fa24192ecdde0cb20ed4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &1093023511
 AudioSource:
   m_ObjectHideFlags: 0
@@ -35548,7 +35509,6 @@ GameObject:
   - component: {fileID: 1253011162}
   - component: {fileID: 1253011161}
   - component: {fileID: 1253011159}
-  - component: {fileID: 1253011158}
   - component: {fileID: 1253011166}
   - component: {fileID: 1253011157}
   - component: {fileID: 1253011156}
@@ -35610,18 +35570,6 @@ MonoBehaviour:
   audioFile: {fileID: 8300000, guid: 11a8c5faf497265488abdb397aad4025, type: 3}
   m_Audio: {fileID: 1253011159}
   box: {fileID: 1253011163}
---- !u!114 &1253011158
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114652744011383820, guid: 8cb9bfb33e7076a4fa86e7404f108dc6,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1253011154}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48bf5c8fc4c5fa24192ecdde0cb20ed4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &1253011159
 AudioSource:
   m_ObjectHideFlags: 0
@@ -39184,7 +39132,6 @@ GameObject:
   - component: {fileID: 1437893847}
   - component: {fileID: 1437893846}
   - component: {fileID: 1437893844}
-  - component: {fileID: 1437893843}
   - component: {fileID: 1437893845}
   - component: {fileID: 1437893842}
   - component: {fileID: 1437893850}
@@ -39222,18 +39169,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_InteractiveItem: {fileID: 1437893850}
   audioFile: {fileID: 0}
---- !u!114 &1437893843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114275367722305594, guid: 8cb9bfb33e7076a4fa86e7404f108dc6,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1437893840}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48bf5c8fc4c5fa24192ecdde0cb20ed4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &1437893844
 AudioSource:
   m_ObjectHideFlags: 0
@@ -56044,7 +55979,6 @@ GameObject:
   - component: {fileID: 1884684648}
   - component: {fileID: 1884684647}
   - component: {fileID: 1884684645}
-  - component: {fileID: 1884684644}
   - component: {fileID: 1884684646}
   - component: {fileID: 1884684643}
   - component: {fileID: 1884684651}
@@ -56082,18 +56016,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_InteractiveItem: {fileID: 1884684651}
   audioFile: {fileID: 0}
---- !u!114 &1884684644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114557052271330004, guid: 8cb9bfb33e7076a4fa86e7404f108dc6,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1884684641}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48bf5c8fc4c5fa24192ecdde0cb20ed4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &1884684645
 AudioSource:
   m_ObjectHideFlags: 0
@@ -56417,7 +56339,6 @@ GameObject:
   - component: {fileID: 1889498029}
   - component: {fileID: 1889498028}
   - component: {fileID: 1889498026}
-  - component: {fileID: 1889498025}
   - component: {fileID: 1889498027}
   - component: {fileID: 1889498024}
   - component: {fileID: 1889498032}
@@ -56455,18 +56376,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_InteractiveItem: {fileID: 1889498032}
   audioFile: {fileID: 0}
---- !u!114 &1889498025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114334967042496910, guid: 8cb9bfb33e7076a4fa86e7404f108dc6,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1889498022}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48bf5c8fc4c5fa24192ecdde0cb20ed4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &1889498026
 AudioSource:
   m_ObjectHideFlags: 0

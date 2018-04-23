@@ -8,6 +8,8 @@ TagManager:
   - Door
   - Clearing
   - Keyboard
+  - Door1
+  - Doo
   layers:
   - Default
   - TransparentFX
