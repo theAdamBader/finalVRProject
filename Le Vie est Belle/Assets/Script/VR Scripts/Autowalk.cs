@@ -12,7 +12,7 @@ public class Autowalk : MonoBehaviour {
 
 	public float speed = 2.0f;
 	public bool moveForward;
-	private Transform centerCam;
+	//private Transform centerCam;
 	private Transform centerCon;
 	private CharacterController controller;
 

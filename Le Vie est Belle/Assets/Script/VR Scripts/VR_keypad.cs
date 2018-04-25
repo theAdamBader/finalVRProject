@@ -13,6 +13,7 @@ public class VR_keypad : MonoBehaviour {
 
 	// Adding a feild to allow the VR Interact know which object to interact with
 	[SerializeField] private VRInteractiveItem m_InteractiveItem;
+	private Animator slidingDoor;
 
 	public AudioClip audioFile;
 	AudioSource m_Audio;
@@ -26,6 +27,8 @@ public class VR_keypad : MonoBehaviour {
 	void Start(){
 		// At the start it would get the audio source for the notes
 		m_Audio = GetComponent<AudioSource> ();
+
+		slidingDoor = GetComponent<Animator> ();
 	}
 
 	// Update is called once per frame
@@ -38,7 +41,7 @@ public class VR_keypad : MonoBehaviour {
 
 			if (playerInput == correctInput)
 			{
-				Destroy(GameObject.FindWithTag("Doo"));
+				slidingDoor.SetBool ("isOpen", true);
 			}
 
 			else {
