@@ -10,6 +10,8 @@ TagManager:
   - Keyboard
   - Door1
   - Doo
+  - Clear
+  - Do
   layers:
   - Default
   - TransparentFX

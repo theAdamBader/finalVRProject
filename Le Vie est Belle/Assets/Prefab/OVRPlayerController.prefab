@@ -751,7 +751,7 @@ Transform:
   m_GameObject: {fileID: 1757474152511104}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4997807859537770}
   m_Father: {fileID: 4004161136013370}
@@ -901,8 +901,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1494349803600858}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 158.79, y: 1.14, z: 72.05}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 160.9, y: 31, z: 21.4}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4792923422005694}
   - {fileID: 4929158394287806}
@@ -930,7 +930,7 @@ Transform:
   m_GameObject: {fileID: 1444318046871706}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4227590022617080}
   m_Father: {fileID: 4004161136013370}
@@ -1837,8 +1837,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_FadeImage: {fileID: 114819403788711338}
-  m_DefaultSnapshot: {fileID: 24500003, guid: d87b47ce31deb1f44bbe100832f18eb4, type: 2}
-  m_FadedSnapshot: {fileID: 24515028, guid: d87b47ce31deb1f44bbe100832f18eb4, type: 2}
+  m_DefaultSnapshot: {fileID: 0}
+  m_FadedSnapshot: {fileID: 0}
   m_FadeColor: {r: 0, g: 0, b: 0, a: 1}
   m_FadeDuration: 2
   m_FadeInOnSceneLoad: 1
@@ -1941,7 +1941,7 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 3264d49bcc9a5994baec39653f84c21e, type: 2}
+  m_Material: {fileID: 0}
   m_Color: {r: 0.9137255, g: 0.11764706, b: 0.3882353, a: 0.3137255}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
@@ -1968,7 +1968,7 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 3264d49bcc9a5994baec39653f84c21e, type: 2}
+  m_Material: {fileID: 0}
   m_Color: {r: 0.9137255, g: 0.11764706, b: 0.3882353, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
@@ -2009,7 +2009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aff17147c9606014f8e8f74f255d466a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_DefaultDistance: 200
+  m_DefaultDistance: 15
   m_UseNormal: 0
   m_Image: {fileID: 114725670644792608}
   m_ReticleTransform: {fileID: 224546522703691120}
@@ -2032,9 +2032,9 @@ MonoBehaviour:
   m_Reticle: {fileID: 114598362800441940}
   m_VrInput: {fileID: 114103927585467068}
   m_ShowDebugRay: 0
-  m_DebugRayLength: 5
+  m_DebugRayLength: 2
   m_DebugRayDuration: 1
-  m_RayLength: 500
+  m_RayLength: 15
   m_LineRenderer: {fileID: 120843159386767100}
   ShowLineRenderer: 1
   m_TrackingSpace: {fileID: 4004161136013370}
@@ -2085,7 +2085,7 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 3264d49bcc9a5994baec39653f84c21e, type: 2}
+  m_Material: {fileID: 0}
   m_Color: {r: 0.9137255, g: 0.11764706, b: 0.3882353, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
@@ -2188,7 +2188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a68af107b6385a419132b6854763669, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2.5
+  speed: 1.5
   moveForward: 0
 --- !u!114 &114964737568769714
 MonoBehaviour:
@@ -2218,7 +2218,7 @@ LineRenderer:
   m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 0}
-  - {fileID: 2100000, guid: dda6e6f5834a82344bf2a42ebd4c2d7b, type: 2}
+  - {fileID: 2100000, guid: e6992809f1d15c54ab6644b4cf34fd7b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2248,7 +2248,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: 0.016393661
+        value: 0.012199402
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -2258,7 +2258,7 @@ LineRenderer:
     colorGradient:
       serializedVersion: 2
       key0: {r: 1, g: 1, b: 1, a: 1}
-      key1: {r: 1, g: 1, b: 1, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 0}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}

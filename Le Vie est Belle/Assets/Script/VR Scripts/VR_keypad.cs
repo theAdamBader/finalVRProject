@@ -42,6 +42,7 @@ public class VR_keypad : MonoBehaviour {
 			if (playerInput == correctInput)
 			{
 				slidingDoor.SetBool ("isOpen", true);
+				Destroy(GameObject.FindWithTag("Do"));
 			}
 
 			else {
@@ -74,5 +75,12 @@ public class VR_keypad : MonoBehaviour {
 		if (playerInput == correctInput) {
 			m_Audio.PlayOneShot (audioFile, 0.5f);
 		}
+
+		// If player makes a mistake then they can clear the string and start from 0
+		if (gameObject.tag == "Clear") {
+			playerInput = "";
+			totalDigits = 0;
+		}
+
 	}
 }
