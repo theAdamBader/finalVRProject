@@ -19,7 +19,7 @@ public class VR_keypad : MonoBehaviour {
 	AudioSource m_Audio;
 
 	// This 14 character code is what the player must put in, it is the musical note to twinkle twinkle little star
-	public static string correctInput = "0000";
+	public static string correctInput = "2504";
 	public static string playerInput = "";
 
 	public static int totalDigits = 0;
