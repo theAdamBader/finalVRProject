@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using VRStandardAssets.Utils;
 
-// This script handles the action for the player to start the game
+// This script handles the action for the player to go to the credits scene at the end of the game
 public class Start_Game : MonoBehaviour
 {
 

@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/* 
+REFERENCE
+	- Teleporter by Brackleys: https://youtu.be/cuQao3hEKfs
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

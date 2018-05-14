@@ -1,3 +1,8 @@
+/*
+REFERENCE
+	VRStandardAssets (asset store): https://assetstore.unity.com/packages/essentials/tutorial-projects/vr-samples-51519
+*/
+
 using System;
 using UnityEngine;
 
@@ -21,9 +26,9 @@ namespace VRStandardAssets.Utils
 
 
         public event Action<SwipeDirection> OnSwipe;                // Called every frame passing in the swipe, including if there is no swipe.
-        public event Action OnClick;                                // Called when Fire1 is released and it's not a double click.
-        public event Action OnDown;                                 // Called when Fire1 is pressed.
-        public event Action OnUp;                                   // Called when Fire1 is released.
+        public event Action OnClick;                                // Called when Fire1 or Primary Touchpad is released and it's not a double click.
+		public event Action OnDown;                                 // Called when Fire1or Primary Touchpad is pressed.
+		public event Action OnUp;                                   // Called when Fire1 or Primary Touchpad is released.
         public event Action OnDoubleClick;                          // Called when a double click is detected.
         public event Action OnCancel;                               // Called when Cancel is pressed.
 
@@ -34,7 +39,7 @@ namespace VRStandardAssets.Utils
         
         private Vector2 m_MouseDownPosition;                        // The screen position of the mouse when Fire1 is pressed.
         private Vector2 m_MouseUpPosition;                          // The screen position of the mouse when Fire1 is released.
-        private float m_LastMouseUpTime;                            // The time when Fire1 was last released.
+		private float m_LastMouseUpTime;                            // The time when Fire1 or Primary Touchpad was last released.
         private float m_LastHorizontalValue;                        // The previous value of the horizontal axis used to detect keyboard swipes.
         private float m_LastVerticalValue;                          // The previous value of the vertical axis used to detect keyboard swipes.
 

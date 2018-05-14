@@ -1,3 +1,9 @@
+/*
+REFERENCE
+	VRStandardAssets (asset store): https://assetstore.unity.com/packages/essentials/tutorial-projects/vr-samples-51519
+	Adding Gear VR to VR Samples (Oculus): https://developer.oculus.com/blog/adding-gear-vr-controller-support-to-the-unity-vr-samples/
+*/
+
 using System;
 using UnityEngine;
 
@@ -25,7 +31,7 @@ namespace VRStandardAssets.Utils
         private VRInteractiveItem m_CurrentInteractible;                //The current interactive item
         private VRInteractiveItem m_LastInteractible;                   //The last interactive item
 
-		//Modified Script
+		// Modified Script
 		[SerializeField] private LineRenderer m_LineRenderer = null; // For supporting Laser Pointer
 		public bool ShowLineRenderer = true;                         // Laser pointer visibility
 		[SerializeField] private Transform m_TrackingSpace = null;   // Tracking space (for line renderer)
@@ -74,7 +80,7 @@ namespace VRStandardAssets.Utils
             Ray ray = new Ray(m_Camera.position, m_Camera.forward);
             RaycastHit hit;
 
-			//Modified Scripts (Inserting laser for the controller)
+			// Modified Scripts (Inserting laser into the controller)
 			Vector3 worldStartPoint = Vector3.zero;
 			Vector3 worldEndPoint = Vector3.zero;
 			if (m_LineRenderer !=null) {
@@ -82,26 +88,28 @@ namespace VRStandardAssets.Utils
 			}
 
 			if (ControllerIsConnected && m_TrackingSpace != null) {
+				// Matrix4x4 calculates the arbitrary linear in 3D transformations
+				// Creating a variable localToWorld and assign it to m_TrackingSpace
 				Matrix4x4 localToWorld = m_TrackingSpace.localToWorldMatrix;
 				Quaternion orientation = OVRInput.GetLocalControllerRotation (Controller);
 
+				//localStartPoint variable is assigned to the controllers position 
+				//To get localEndPoint, you add the localStartPoint to the orientation and multiple the orientation the to forward function and add the distant float
 				Vector3 localStartPoint = OVRInput.GetLocalControllerPosition (Controller);
-				Vector3 localEndPoint = localStartPoint + ((orientation * Vector3.forward) * 500.0f);
+				Vector3 localEndPoint = localStartPoint + ((orientation * Vector3.forward) * 50.0f);
 
 				worldStartPoint = localToWorld.MultiplyPoint(localStartPoint);
 				worldEndPoint = localToWorld.MultiplyPoint(localEndPoint);
 
-				// Create new ray
+				// Creates a new ray
 				ray = new Ray(worldStartPoint, worldEndPoint - worldStartPoint);
-
-
 			}
-				
+		//------------------------------------------------------------------------------------------------------------------------------//		
             
             // Do the raycast forweards to see if we hit an interactive item
             if (Physics.Raycast(ray, out hit, m_RayLength, ~m_ExclusionLayers))
             {
-                VRInteractiveItem interactible = hit.collider.GetComponent<VRInteractiveItem>(); //attempt to get the VRInteractiveItem on the hit object
+                VRInteractiveItem interactible = hit.collider.GetComponent<VRInteractiveItem>(); // Attempt to get the VRInteractiveItem on the hit object
                 m_CurrentInteractible = interactible;
 
                 // If we hit an interactive item and it's not the same as the last interactive item, then call Over
@@ -121,6 +129,7 @@ namespace VRStandardAssets.Utils
                 if (OnRaycasthit != null)
                     OnRaycasthit(hit);
 
+				// Modified to get the end point and equate it to the hit.point
 				if (interactible) {
 					worldEndPoint = hit.point;
 				}
@@ -138,12 +147,14 @@ namespace VRStandardAssets.Utils
 					m_Reticle.SetPosition(ray.origin, ray.direction);
             }
 
+			// If the controller is connected and the line renderer is not nulled then it would find the start position and end position
 			if (ControllerIsConnected && m_LineRenderer != null) {
 				m_LineRenderer.SetPosition (0, worldStartPoint);
 				m_LineRenderer.SetPosition (1, worldEndPoint);
 			}
         }
 
+		//-----------------------------------------------------------------------------------------------------------------------//
 
         private void DeactiveLastInteractible()
         {

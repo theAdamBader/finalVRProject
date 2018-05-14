@@ -1531,7 +1531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aff17147c9606014f8e8f74f255d466a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_DefaultDistance: 15
+  m_DefaultDistance: 0
   m_UseNormal: 0
   m_Image: {fileID: 1526857159}
   m_ReticleTransform: {fileID: 1526857158}

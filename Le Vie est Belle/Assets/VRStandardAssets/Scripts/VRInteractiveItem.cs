@@ -1,3 +1,8 @@
+/*
+REFERENCE
+	VRStandardAssets (asset store): https://assetstore.unity.com/packages/essentials/tutorial-projects/vr-samples-51519
+*/
+
 using System;
 using UnityEngine;
 
@@ -13,8 +18,8 @@ namespace VRStandardAssets.Utils
         public event Action OnOut;              // Called when the gaze leaves this object
         public event Action OnClick;            // Called when click input is detected whilst the gaze is over this object.
         public event Action OnDoubleClick;      // Called when double click input is detected whilst the gaze is over this object.
-        public event Action OnUp;               // Called when Fire1 is released whilst the gaze is over this object.
-        public event Action OnDown;             // Called when Fire1 is pressed whilst the gaze is over this object.
+        public event Action OnUp;               // Called when Fire1 or Primary Trigger is released whilst the gaze is over this object.
+		public event Action OnDown;             // Called when Fire1 or Primary Trigger is pressed whilst the gaze is over this object.
 
 
         protected bool m_IsOver;

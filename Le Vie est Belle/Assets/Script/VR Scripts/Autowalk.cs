@@ -12,8 +12,7 @@ public class Autowalk : MonoBehaviour {
 
 	public float speed = 2.0f;
 	public bool moveForward;
-	//private Transform centerCam;
-	private Transform centerCon;
+	private Transform centreCon;
 	private CharacterController controller;
 
 	// Use this for initialization
@@ -21,7 +20,7 @@ public class Autowalk : MonoBehaviour {
 		controller = GetComponent<CharacterController> ();
 
 		// Finds the game object called "Right Hand"
-		centerCon = GameObject.FindWithTag("Right Hand").transform;
+		centreCon = GameObject.FindWithTag("Right Hand").transform;
 	}
 
 	// Update is called once per frame
@@ -39,7 +38,7 @@ public class Autowalk : MonoBehaviour {
 
 		// If the controller is centered some where then it calls the simple and gives a new point to move forward
 		if (moveForward){
-			Vector3 forward = centerCon.TransformDirection (Vector3.forward);
+			Vector3 forward = centreCon.TransformDirection (Vector3.forward);
 			controller.SimpleMove (forward * speed);
 		}
 	}

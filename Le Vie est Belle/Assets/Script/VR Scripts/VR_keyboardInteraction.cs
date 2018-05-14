@@ -1,6 +1,6 @@
 ﻿/*
 	REFERENCE
-	-VR Sample (Example Interaction.cs): https://assetstore.unity.com/packages/essentials/tutorial-projects/vr-samples-51519
+		- VR Sample (Example Interaction.cs): https://assetstore.unity.com/packages/essentials/tutorial-projects/vr-samples-51519
 */
 
 using UnityEngine;
@@ -17,7 +17,7 @@ public class VR_keyboardInteraction : MonoBehaviour
 	public AudioClip audioFile;
 	[SerializeField] private AudioSource m_Audio;
 	public Collider box;
-	//[SerializeField] private ParticleSystem m_Particle;
+
 
 	private void Awake ()
 	{
@@ -33,7 +33,6 @@ public class VR_keyboardInteraction : MonoBehaviour
 		m_InteractiveItem.OnOver += HandleOver;
 		m_InteractiveItem.OnOut += HandleOut;
 		m_InteractiveItem.OnClick += HandleClick;
-
 	}
 
 
@@ -46,7 +45,7 @@ public class VR_keyboardInteraction : MonoBehaviour
 	}
 
 
-	//Handle the Over event
+	// Handle the Over event
 	private void HandleOver()
 	{
 		// When over the interactable object it would change the colour of the material
@@ -57,7 +56,7 @@ public class VR_keyboardInteraction : MonoBehaviour
 	}
 
 
-	//Handle the Out event
+	// Handle the Out event
 	private void HandleOut()
 	{
 		// When no longer interacting with the object it would default to the normal material
@@ -68,15 +67,12 @@ public class VR_keyboardInteraction : MonoBehaviour
 	}
 
 
-	//Handle the Click event
+	// Handle the Click event
 	private void HandleClick()
 	{
 		// When clicking on the objects, the audio would play
 		m_Audio = GetComponent<AudioSource> ();
 		m_Audio.PlayOneShot (audioFile, 0.5f);
 
-		//m_Particle.emissionRate = 10.0f;
 	}
-
-
 }

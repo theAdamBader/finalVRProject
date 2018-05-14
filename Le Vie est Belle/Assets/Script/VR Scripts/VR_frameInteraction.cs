@@ -10,6 +10,7 @@ public class VR_frameInteraction : MonoBehaviour {
 	[SerializeField] private VRInteractiveItem m_InteractiveItem;
 	[SerializeField] private Renderer m_Renderer;
 
+
 	private void Awake ()
 	{
 		// Start of the game the normal material would with the dev or player changing the material directly onto it
@@ -23,7 +24,6 @@ public class VR_frameInteraction : MonoBehaviour {
 		// Which is called from the VRInput.cs
 		m_InteractiveItem.OnOver += HandleOver;
 		m_InteractiveItem.OnOut += HandleOut;
-
 	}
 
 
@@ -35,20 +35,18 @@ public class VR_frameInteraction : MonoBehaviour {
 	}
 
 
-	//Handle the Over event
+	// Handle the Over event
 	private void HandleOver()
 	{
 		// When over the interactable object it would change the colour of the material
 		m_Renderer.material = m_OverMaterial;
-
 	}
 
 
-	//Handle the Out event
+	// Handle the Out event
 	private void HandleOut()
 	{
 		// When no longer interacting with the object it would default to the normal material
 		m_Renderer.material = m_NormalMaterial;
-
 	}
 }

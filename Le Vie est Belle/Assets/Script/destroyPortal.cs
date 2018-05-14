@@ -4,18 +4,9 @@ using UnityEngine;
 
 public class destroyPortal : MonoBehaviour {
 
+	// This script destroys the portal when the player enters the second puzzle
 	public GameObject portalCollider;
 	public GameObject portal;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
 	void OnTriggerEnter (Collider destroyPortal)
 	{

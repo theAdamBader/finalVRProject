@@ -1,5 +1,6 @@
-﻿/* REFERENCE
-Teleporter: https://youtu.be/cuQao3hEKfs
+﻿/* 
+REFERENCE
+	- Teleporter by Brackleys: https://youtu.be/cuQao3hEKfs
 */
 
 using System.Collections;
@@ -22,7 +23,7 @@ public class teleportCollider : MonoBehaviour {
 			Vector3 portalToThePlayer = player.position - transform.position;
 			float dotProduct = Vector3.Dot(transform.up, portalToThePlayer);
 
-			// If this is true then the player moved across the portal
+			// If this is true then the player moves across the portal
 			if (dotProduct < 0f)
 			{
 				// This calculates the difference between the portals and the player

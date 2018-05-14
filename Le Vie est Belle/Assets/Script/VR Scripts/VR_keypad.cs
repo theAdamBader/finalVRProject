@@ -1,6 +1,6 @@
 ﻿/*
 	REFERENCE:
-	Keypad inputs (basic) by Game Design HQX: https://youtu.be/o7aC62Nsv-M
+		- Keypad inputs (basic) by Game Design HQX: https://youtu.be/o7aC62Nsv-M
 */
 
 using System.Collections;
@@ -24,6 +24,7 @@ public class VR_keypad : MonoBehaviour {
 
 	public static int totalDigits = 0;
 
+
 	void Start(){
 		// At the start it would get the audio source for the notes
 		m_Audio = GetComponent<AudioSource> ();
@@ -33,7 +34,6 @@ public class VR_keypad : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-
 		// If player get all the 14 notes, two of the following thing would run
 		// First, if correct then it would destroy the door at the house in the main stage
 		// Else returns back to 0 and player would rewrite the code
@@ -41,6 +41,7 @@ public class VR_keypad : MonoBehaviour {
 
 			if (playerInput == correctInput)
 			{
+				// It will find the object and processed to the sliding door to open when the animator 'isOpen' is set to true
 				slidingDoor.SetBool ("isOpen", true);
 				Destroy(GameObject.FindWithTag("Do"));
 			}
@@ -52,6 +53,7 @@ public class VR_keypad : MonoBehaviour {
 		}
 	}
 
+
 	private void OnEnable()
 	{
 		m_InteractiveItem.OnClick += HandleClick;
@@ -62,10 +64,9 @@ public class VR_keypad : MonoBehaviour {
 	{
 		m_InteractiveItem.OnClick -= HandleClick;
 	}
-
+		
 
 	void HandleClick(){
-
 		// If player interacts with the game object then it would increase the total digits by one and inserts the name of the object
 		// Objects are giving name to match the string
 		playerInput += gameObject.name;
@@ -81,6 +82,5 @@ public class VR_keypad : MonoBehaviour {
 			playerInput = "";
 			totalDigits = 0;
 		}
-
 	}
 }
