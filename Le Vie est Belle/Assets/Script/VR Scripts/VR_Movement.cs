@@ -1,14 +1,9 @@
-﻿/*
-	REFERENCE:
-	Autowalk: https://youtu.be/JmgOeQ3Gric
-*/
-
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 // This script handles movement with the Samsung gear VR controller
-public class Autowalk : MonoBehaviour {
+public class VR_Movement : MonoBehaviour {
 
 	public float speed = 2.0f;
 	public bool moveForward;

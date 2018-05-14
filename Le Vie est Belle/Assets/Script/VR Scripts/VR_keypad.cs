@@ -1,9 +1,4 @@
-﻿/*
-	REFERENCE:
-		- Keypad inputs (basic) by Game Design HQX: https://youtu.be/o7aC62Nsv-M
-*/
-
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using VRStandardAssets.Utils;

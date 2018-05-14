@@ -1,9 +1,4 @@
-﻿/*
-	REFERENCE
-		- VR Sample (Example Interaction.cs): https://assetstore.unity.com/packages/essentials/tutorial-projects/vr-samples-51519
-*/
-
-using UnityEngine;
+﻿using UnityEngine;
 using VRStandardAssets.Utils;
 
 // This script the keyboard functions will work on VR
