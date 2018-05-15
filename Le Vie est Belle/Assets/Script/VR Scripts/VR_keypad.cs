@@ -13,7 +13,7 @@ public class VR_keypad : MonoBehaviour {
 	public AudioClip audioFile;
 	AudioSource m_Audio;
 
-	// This 14 character code is what the player must put in, it is the musical note to twinkle twinkle little star
+	// This 4 character code is what the player must put in, that would open the sliding door
 	public static string correctInput = "2504";
 	public static string playerInput = "";
 
@@ -29,7 +29,7 @@ public class VR_keypad : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		// If player get all the 14 notes, two of the following thing would run
+		// If player get all the 4 inputs, two of the following thing would run
 		// First, if correct then it would destroy the door at the house in the main stage
 		// Else returns back to 0 and player would rewrite the code
 		if (totalDigits == 4){

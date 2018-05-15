@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// This script handles movement with the Samsung gear VR controller
+// This script handles movement with the Samsung Gear VR controller
 public class VR_Movement : MonoBehaviour {
 
 	public float speed = 2.0f;

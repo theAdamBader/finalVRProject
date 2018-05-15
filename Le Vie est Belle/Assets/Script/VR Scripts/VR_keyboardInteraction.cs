@@ -23,7 +23,7 @@ public class VR_keyboardInteraction : MonoBehaviour
 
 	private void OnEnable()
 	{
-		// These enable the controller or HMD to interacts with the interactable objects
+		// These enable the controller to interacts with the interactable objects
 		// Which is called from the VRInput.cs
 		m_InteractiveItem.OnOver += HandleOver;
 		m_InteractiveItem.OnOut += HandleOut;
@@ -33,7 +33,7 @@ public class VR_keyboardInteraction : MonoBehaviour
 
 	private void OnDisable()
 	{
-		// These disable the controller or HMD once it leaves the interactable objects
+		// These disable the controller once it leaves the interactable objects
 		m_InteractiveItem.OnOver -= HandleOver;
 		m_InteractiveItem.OnOut -= HandleOut;
 		m_InteractiveItem.OnClick -= HandleClick;
